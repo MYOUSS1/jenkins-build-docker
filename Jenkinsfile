@@ -10,7 +10,7 @@ node {
     }
 
     stage('Test image') {
-        docker.image("xavki/nginx").withRun('-p 8181:81') {
+        docker.image("xavki/nginx").withRun('-p 8080:80') {
             sh 'docker ps'
             sh 'curl localhost'
         }
